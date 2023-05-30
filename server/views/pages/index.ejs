@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plena Inclusion</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { padding-top:50px; }
+    </style>
+</head>
+<body class="container">
+    <main>
+        <h1>PLENA INCLUSION</h1>
+        <br><br><br>
+            <h1>Registrar Admin</h1>
+        <div class="form">
+            <form action="/register" method="post">
+                Username: <input type="text" name="username" value="" /><br><br>
+                Password: <input type="text" name="password" value="" /><br><br>
+                ConfPassword: <input type="text" name="confPassword" value="" /><br><br>
+                <input type="submit" value="Registrar admin"/><br><br><hr>
+            </form>
+            <h1>Mostrar Admins</h1>
+            <form action="/getUsers" method="post">
+                <input type="submit" value="Mostrar Admins"/><br><br><hr>
+            </form>
+            <h1>Registrar Actividad</h1>
+            <form action="/addActivity" method="post">
+                Nombre: <input type="text" name="name" value="" /><br><br>
+                Fecha: <input type="date" name="date" value="" /><br><br>
+                <input type="submit" value="Registrar Actividad"/><br><br><hr>
+            </form>
+            <h1>Mostrar Actividades</h1>
+            <form action="/getActivities" method="post">
+                <input type="submit" value="Mostrar Actividades"/><br><br><hr>
+            </form>
+            <h1>Registrar usuario (no admin)</h1>
+            <form action="/registerUser" method="post">
+                Username: <input type="text" name="username" value="" /><br><br>
+                <input type="submit" value="Registrar Usuario"/><br><br><hr>
+            </form>
+            <h1>Login de Admins</h1>
+            <form action="/login" method="post">
+                Username: <input type="text" name="username" value="" /><br><br>
+                Password: <input type="password" name="password" value="" /><br><br>
+                <input type="submit" value="Iniciar sesión"/><br><br><hr>
+            </form>
+            <h1>Crear relación entre actividad y participante</h1>
+            <form action="/addParticipantActivity" method="POST">
+                <label for="participantId">ID del participante:</label>
+                <input type="number" name="participantId" id="participantId" required><br><br>
+                <label for="activityId">ID de la actividad:</label>
+                <input type="number" name="activityId" id="activityId" required><br><br>
+                <button type="submit">Crear relación</button>
+            </form>
+            <h1>Buscar actividades entre fechas</h1>
+            <form action="/buscarActividades" method="POST">
+              <label for="startDate">Fecha de inicio:</label>
+              <input type="date" name="startDate" id="startDate" required><br><br>
+              <label for="endDate">Fecha de finalización:</label>
+              <input type="date" name="endDate" id="endDate" required><br><br>
+              <button type="submit">Buscar actividades</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p class="text-center text-muted">Todos los derechos reservados Rubén, Trif, Ainhoa y Jorge © Copyright 2023</p>
+    </footer>
+</body>
+</html>
